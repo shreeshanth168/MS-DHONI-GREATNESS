@@ -263,6 +263,21 @@ h2{font-size:clamp(32px,9vw,44px)}
 .card .pic,.hd .pic{border:1px solid rgba(255,255,255,.95);background:linear-gradient(135deg,rgba(255,255,255,.85),rgba(190,205,255,.5));box-shadow:0 24px 60px rgba(7,26,92,.2),inset 0 1px 0 #fff,0 0 0 1px rgba(31,79,224,.12)}
 .card .pic img,.hd .pic img{inset:8px;width:calc(100% - 16px);height:calc(100% - 16px);border-radius:18px}
 #lb img{border-radius:16px;box-shadow:0 0 0 8px rgba(255,255,255,.12)}
+/* mastermind */
+.ms{position:relative;overflow:hidden;background:linear-gradient(160deg,#06174f,#0e2a8f 70%,#13359f);color:#fff}
+.ms .w{position:relative;z-index:1}.ms .sub{color:#c8d3ff}
+.mtabs{display:inline-flex;background:rgba(255,255,255,.1);border-radius:999px;padding:5px;margin-bottom:26px}
+.mtabs button{border:0;background:none;padding:10px 24px;border-radius:999px;font:600 15px 'Inter Tight',sans-serif;color:#c8d3ff;cursor:pointer}
+.mtabs button[aria-selected=true]{background:var(--gold);color:var(--navy)}
+.pn{display:none}.pn.on{display:block}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px}
+.st div{border-radius:22px;padding:22px 18px}
+.st b{display:block;font-size:clamp(34px,4.4vw,48px);letter-spacing:-.04em;color:var(--gold);line-height:1;font-weight:600}
+.st small{font-size:14px;color:#dfe6ff}
+.fc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.fc div{border-radius:24px;padding:26px}
+.fc h3{font-size:25px;margin-bottom:8px}.fc p{color:#cfd9ff;font-size:15.5px;line-height:1.55}
+@media(max-width:1100px){nav ul{gap:14px;font-size:13px}}
 /* csk */
 .csk{position:relative;background:var(--navy);color:#fff;overflow:hidden}
 .csk video,.csk .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.3;-webkit-mask-image:linear-gradient(transparent,#000 24%,#000 76%,transparent);mask-image:linear-gradient(transparent,#000 24%,#000 76%,transparent)}
@@ -301,7 +316,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px;text-align:center;backgro
 <div class="c"><div class="ln"></div><div class="k">A tribute to the legend</div><div class="tt">MS Dhoni</div><div class="sb">Enter the world of MS Dhoni</div>
 <div class="cd"><div class="row"><input id="cin" type="text" inputmode="numeric" maxlength="2" autocomplete="off" placeholder="00" aria-label="Enter code"><button id="ent" class="btn b1" type="button">Enter</button></div><div class="hint">Enter code<b>07</b></div></div></div></div>
 
-<nav><b>MSD</b><ul><li><a href="#about">About</a></li><li><a href="#stats">Stats</a></li><li><a href="#journey">Journey</a></li><li><a href="#trophies">Trophies</a></li><li><a href="#moments">Moments</a></li><li><a href="#csk">CSK</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#blog">Stories</a></li></ul><a class="btn b1" href="#gallery">View gallery</a><button class="mbtn" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></nav>
+<nav><b>MSD</b><ul><li><a href="#about">About</a></li><li><a href="#stats">Stats</a></li><li><a href="#journey">Journey</a></li><li><a href="#mastermind">Mastermind</a></li><li><a href="#trophies">Trophies</a></li><li><a href="#moments">Moments</a></li><li><a href="#csk">CSK</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#blog">Stories</a></li></ul><a class="btn b1" href="#gallery">View gallery</a><button class="mbtn" type="button" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></nav>
 
 <header class="hx" id="top"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i>
 <div class="w hxg"><div class="glass hxl"><div class="jn"><b class="num" aria-label="Jersey number 07">07</b><span class="sep"></span><div><strong>Mahendra Singh Dhoni</strong><small>Captain Cool</small></div></div><h1>Some chases end late.<em>He finishes them.</em></h1><p>Wicketkeeper, captain and the calmest head in the last over. Three ICC trophies, five IPL titles.</p><div class="btns"><a class="btn b1" href="#stats">See his numbers</a><a class="btn bgl" href="#journey">The journey</a></div></div>
@@ -338,6 +353,14 @@ footer{padding:34px 0;color:var(--mute);font-size:13px;text-align:center;backgro
 <article class="rv c"><time>2021</time><span class="tg">CSK</span><h3>Champions again in Dubai</h3><p>A fourth IPL title for CSK, won in the UAE.</p></article>
 <article class="rv c"><time>2023</time><span class="tg">CSK</span><h3>The fifth star</h3><p>A fifth IPL title, won on the last ball of the final. The yellow story goes on.</p></article></div></div></section>
 
+<section class="ms" id="mastermind"><i class="orb o1"></i><i class="orb o2"></i><div class="w"><h2 class="rv">The mastermind</h2><p class="sub">Hands that never missed, and a mind that never panicked.</p>
+<div class="mtabs" role="tablist"><button role="tab" aria-selected="true" data-p="wk">Wicketkeeping</button><button role="tab" aria-selected="false" data-p="cp">Captaincy</button></div>
+<div class="pn on" id="p-wk"><div class="st"><div class="glass"><b>829</b><small>International dismissals</small></div><div class="glass"><b>195</b><small>Stumpings, the most by any keeper</small></div><div class="glass"><b>444</b><small>ODI dismissals</small></div><div class="glass"><b>294</b><small>Test dismissals</small></div></div>
+<div class="fc"><div class="glass"><h3>Lightning stumpings</h3><p>A batter lifted a heel for a split second and the bails were already off. Spinners planned whole overs around that threat.</p></div><div class="glass"><h3>The run-out that won it</h3><p>World T20 2016, Bengaluru. Bangladesh needed two off the last ball. Dhoni threw off a glove, ran to the stumps and won it by one run.</p></div><div class="glass"><h3>The Dhoni Review System</h3><p>Fans joked that DRS stood for his name, because his instinct for when to ask for a review was so sharp.</p></div></div></div>
+<div class="pn" id="p-cp"><div class="st"><div class="glass"><b>332</b><small>Matches as India captain</small></div><div class="glass"><b>178</b><small>Wins across three formats</small></div><div class="glass"><b>3</b><small>ICC trophies, the only captain with all three</small></div><div class="glass"><b>5</b><small>IPL titles with CSK</small></div></div>
+<div class="fc"><div class="glass"><h3>Bold calls</h3><p>The 2007 bowl-out with part-time bowlers, the last over to Joginder Sharma, and promoting himself above Yuvraj in the 2011 final.</p></div><div class="glass"><h3>Backing youngsters</h3><p>He made Rohit Sharma an opener, and gave Kohli, Raina, Ashwin, Jadeja and Bumrah long runs in the side.</p></div><div class="glass"><h3>Calm under pressure</h3><p>Winning or losing, his face looked the same. Teams played without panic because he showed none.</p></div></div></div>
+<p style="margin-top:26px"><a class="btn b1" href="blogs.html">Read the full stories</a></p></div></section>
+
 <section class="about" id="trophies"><div class="w"><h2 class="rv">Trophies and honours</h2><p class="sub">Silverware as captain.</p><div class="tro rv">
 <div><h3>ICC World T20</h3><p>2007, South Africa</p></div><div><h3>ICC World Cup</h3><p>2011, India</p></div><div><h3>Champions Trophy</h3><p>2013, England</p></div>
 <div class="y"><h3>5 IPL titles</h3><p>Chennai Super Kings: 2010, 2011, 2018, 2021, 2023</p></div><div class="y"><h3>Champions League T20</h3><p>2010 and 2014 with Chennai Super Kings</p></div><div><h3>No. 1 in Tests</h3><p>India topped the ICC Test rankings in 2009</p></div></div>
@@ -358,7 +381,7 @@ footer{padding:34px 0;color:var(--mute);font-size:13px;text-align:center;backgro
 <section class="about" id="blog"><div class="w"><h2 class="rv">Stories</h2><p class="sub">Why he mattered, in a few minutes of reading.</p><div class="posts">
 <article class="post"><time>Leadership</time><h3>Why Captain Cool worked</h3><p>He rarely raised his voice, and rarely needed to. His teams played without panic because he showed none.</p><div class="more"><p>He backed young players through poor runs, kept plans simple, and decided late, with the full picture in front of him.</p></div><button>Read more</button></article>
 <article class="post"><time>Batting</time><h3>The art of the finish</h3><p>He went deep in chases, kept the rate in range, then used power only when needed.</p><div class="more"><p>An ODI average above 50, helped by many not outs, shows a batter who valued the win over his own score.</p></div><button>Read more</button></article>
-<article class="post"><time>Keeping</time><h3>Hands faster than the eye</h3><p>With 829 international dismissals, he was also among the quickest stumpers the game has seen.</p><div class="more"><p>195 of those were stumpings, many from batters who only lifted a heel.</p></div><button>Read more</button></article></div></div></section>
+<article class="post"><time>Keeping</time><h3>Hands faster than the eye</h3><p>With 829 international dismissals, he was also among the quickest stumpers the game has seen.</p><div class="more"><p>195 of those were stumpings, many from batters who only lifted a heel.</p></div><button>Read more</button></article></div><p style="margin-top:30px"><a class="btn b1" href="blogs.html">Read all 10 stories</a></p></div></section>
 
 <section class="cta"><div class="w"><h2>Some finishes stay forever.<br><span>This one has a number: 7.</span></h2><a class="btn b3" href="#gallery">Back to the gallery</a></div></section>
 <section class="tb" id="tribute"><i class="orb o1"></i><i class="orb o2"></i><div class="w">
@@ -403,6 +426,7 @@ if(matchMedia('(hover:hover)').matches)setTimeout(function(){i.focus()},3600)})(
 mb.addEventListener('click',function(e){e.stopPropagation();const o=nv.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
 nv.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){nv.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
 document.addEventListener('click',function(e){if(!nv.contains(e.target))nv.classList.remove('open')})})();
+(function(){const bs=document.querySelectorAll('.mtabs button');bs.forEach(function(b){b.addEventListener('click',function(){bs.forEach(function(x){x.setAttribute('aria-selected',x===b)});document.querySelectorAll('.ms .pn').forEach(function(p){p.classList.toggle('on',p.id==='p-'+b.dataset.p)})})})})();
 </script>
 </body>
 </html>
